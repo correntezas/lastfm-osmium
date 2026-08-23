@@ -5,11 +5,10 @@ from osmium_chat import commands, Message, Context
 logger = getLogger("osmium_chat")
 
 
-class GeneralCommands(commands.Commands):
+class CoreCommands(commands.Commands):
     @commands.listen("connect")
     async def on_connect(self) -> None:
         logger.info("Bot connected to WebSocket server")
-        await self.bot.use_invite("xYnNrbRy20ZSS4rS")
 
     @commands.listen("message")
     async def on_message(self, message: Message) -> None:
@@ -35,3 +34,8 @@ class GeneralCommands(commands.Commands):
     @commands.guild_command("community")
     async def community(self, ctx: Context) -> None:
         await ctx.channel.send("This command only works in community channels!")
+
+    @commands.command("join")
+    async def join(self, ctx: Context, code: str) -> None:
+        await ctx.bot.use_invite(code)
+        await ctx.reply(f"Joined via {code}.")

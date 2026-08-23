@@ -13,7 +13,7 @@ from osmium_chat import Bot, Context, Message, commands
 from os import getenv
 from dotenv import load_dotenv
 import os
-from commands import general, lastfm
+from modules import general, lastfm
 
 load_dotenv()
 TOKEN = os.getenv('OSMIUM_TOKEN')
