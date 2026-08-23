@@ -8,6 +8,7 @@ logger = getLogger("osmium_chat")
 
 
 class LastFMCommands(commands.Commands):
+    """Last.fm related commands"""
     @commands.command("c")
     async def c(self, ctx: Context, *, size: str | None = "3x3") -> None:
         """Send the weekly collage chart at the requested size."""

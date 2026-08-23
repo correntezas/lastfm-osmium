@@ -2,7 +2,7 @@
 
 from logging import getLogger
 
-from osmium_chat import Context, Message, commands
+from osmium_chat import Context, commands
 
 logger = getLogger("osmium_chat")
 
