@@ -9,3 +9,8 @@ dependencies = [
     "osmium-chat>=0.3.6",
     "python-dotenv>=1.2.3",
 ]
+
+[dependency-groups]
+dev = [
+    "pylint>=4.0.7",
+]
